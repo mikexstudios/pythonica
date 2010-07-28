@@ -1,17 +1,35 @@
-Pythonica
+pythonica
 =========
 
-This is the new home of Pythonica. It was written by Joe Strout. Until this
-page is fleshed out, information on Pythonica can be found here.
+pythonica is a proof of concept python implementation of a symbolic math
+program, based upon the Mathematica style syntax. 
 
+pythonica parses Mathematica style input into a canonical expression form known
+as "FullForm". The expression is then evaluated, generating a result. The
+result is simplified as much as the program is able, then printed to the user
+-- both in FullForm, and in "natural" form. (The intermediate steps are
+displayed to make it more apparent what is happening; minor changes to
+the code could surpress this intermediate output.)
+
+For an expanded description, see:
 http://www.strout.net/info/coding/python/pythonica.html
 
 
-Changes
-=======
-
-6/10/04
+Authors
 -------
+
+*   [Joe Strout](http://www.strout.net/) - original author.
+*   [Kevin Ballard](http://kevin.sb.org/) - second maintainer; additional
+    modifications as described in the Changes section.
+  
+
+Changes
+-------
+
+These are the changes that Kevin Ballard completed on top of the original
+Joe Strout codebase.
+
+### 6/10/04
 *   Added list support. Lists are encased in square brackets ([])
 *   Added slice support. A slice is written as [[args]] right after an
     expression and returns the component of the expression described by args.
@@ -23,8 +41,7 @@ Changes
 *   Fixed parsing such that a+b*c+d works and that a=c*d+k*r works
 *   Fixed complex number parsing such that j by itself is equivalent to 1j
 
-5/27/04
--------
+### 5/27/04
 *   Fixed floating point numbers to not complain that "." isn't an operator
 *   Complex number shorthand now works! 2j now becomes Complex[0,2], and 2+2j
     now becomes Plus[2,Complex[0,2]]
@@ -32,8 +49,7 @@ Changes
     type an invalid token that begins with a digit, it now tells you
     specifically that symbols can't begin with a digit
 
-5/25/04
--------
+### 5/25/04
 *   Added functions Sqrt/Root/Exp/Abs/Mod/Round
 *   Re-wrote a bunch of logic concerning parsing tokens and groups
 *   Fixed some strange bugs, like Sin[3,2],2 becoming Sin[3,2,2]
@@ -43,8 +59,7 @@ Changes
     write complex numbers as Complex[real,imag] (imag being optional and defaults
     to 0). In the future you will be able to write them like (3+2j)
 
-5/23/04
--------
+### 5/23/04
 *   Added functions Sin/Cos/Tan/ASin/ACos/ATan/Rad2Deg/Deg2Rad
 *   Divide is no longer chainable
 *   You can put full-form functions next to each other and it assumes multiply:
@@ -53,3 +68,11 @@ Changes
     and continues. If an exception occurs while running from the interpreter
     (i.e. imported as a module) it passes the exception on for debugging
 *   Other miscellaneous bugfixes
+
+
+Links
+-----
+
+[1]: http://www.strout.net/info/coding/python/pythonica.html
+[2]: http://kevin.sb.org/2004/05/24/pythonica/
+[3]: http://kevin.sb.org/2004/06/10/slices-in-pythonica/
