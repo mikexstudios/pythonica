@@ -73,6 +73,6 @@ Joe Strout codebase.
 Links
 -----
 
-[1]: http://www.strout.net/info/coding/python/pythonica.html
-[2]: http://kevin.sb.org/2004/05/24/pythonica/
-[3]: http://kevin.sb.org/2004/06/10/slices-in-pythonica/
+http://www.strout.net/info/coding/python/pythonica.html
+http://kevin.sb.org/2004/05/24/pythonica/
+http://kevin.sb.org/2004/06/10/slices-in-pythonica/
