@@ -21,7 +21,13 @@ Authors
 *   [Joe Strout](http://www.strout.net/) - original author.
 *   [Kevin Ballard](http://kevin.sb.org/) - second maintainer; additional
     modifications as described in the Changes section.
-  
+
+
+License
+-------
+
+pythonica is public domain.  Do with it as you like.
+
 
 Changes
 -------
